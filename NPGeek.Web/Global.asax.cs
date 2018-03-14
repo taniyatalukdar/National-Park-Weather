@@ -26,12 +26,13 @@ namespace NPGeek.Web
         {
             var kernel = new StandardKernel();
 
-            string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
+			string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
-            // Map Interfaces to Classes
-            //kernel.Bind<interface>().To<class>();
 
-            return kernel;
+			// Map Interfaces to Classes
+			//kernel.Bind<interface>().To<class>();
+
+			return kernel;
         }
     }
 }

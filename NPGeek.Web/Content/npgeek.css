@@ -1,0 +1,59 @@
+﻿nav {
+    margin-top: 25px;
+}
+
+    nav h2, nav p {
+        color: white;
+        margin-left: 25px;
+    }
+
+    nav p {
+        font-size: 12px;
+        font-style: italic;
+    }
+
+
+
+li {
+    padding-bottom: 4px;
+}
+
+    li a {
+        color: #0D118B;
+        text-decoration: none;
+        font-size: 18px;
+        text-align: center;
+    }
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+    nav ul li {
+        background-color: #FFF;
+        border-radius: 8px;
+        list-style: none;
+        text-align: center;
+        flex-grow: 1;
+        padding-top: 5px;
+        margin: 0 10px;
+        max-width: 200px;
+    }
+
+
+
+li a:hover {
+    text-decoration: underline;
+}
+
+
+
+img{
+    width:400px;
+    height:auto;
+}
+h1{
+    background-color:lightskyblue;
+}
