@@ -1,5 +1,12 @@
-﻿@{
+﻿@model List<NPGeek.Web.Models.Park>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+@foreach (var park in Model)
+{
+    <form method="get" action="@Url.Action("ParkDetail", "Park")">
+        <input type="image" src="~/Content/img/parks/@(park.ParkCode.ToLower()).jpg" value="@park.ParkCode" name="code" />
+            @*<h2>@park.ParkName</h2>*@
+    </form>
+}

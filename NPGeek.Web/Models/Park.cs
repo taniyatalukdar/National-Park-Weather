@@ -13,7 +13,7 @@ namespace NPGeek.Web.Models
 		public int Acreage { get; set; }
 		public int Elevation { get; set; }
 		public double MilesOfTrail { get; set; }
-		public int NumberOfCampSites { get; set; }
+		public int NumberOfCampsites { get; set; }
 		public string Climate { get; set; }
 		public int YearFounded { get; set; }
 		public string InspirationalQuote { get; set; }

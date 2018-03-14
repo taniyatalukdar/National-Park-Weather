@@ -8,16 +8,16 @@ using System.Data.SqlClient;
 
 namespace NPGeek.Web.DAL
 {
-	public class IParksDAL
+	public interface IParksDAL
 	{
-		private string connectionString;
+        //private string connectionString;
 
-		public IParksDAL(string dbConnectionString)
-		{
-			connectionString = dbConnectionString;
-		}
-
-
+        //public IParksDAL(string dbConnectionString)
+        //{
+        //	connectionString = dbConnectionString;
+        //}
+        List<Park> GetParks();
+        Park GetOnePark(string code);
 		
 
 	}
