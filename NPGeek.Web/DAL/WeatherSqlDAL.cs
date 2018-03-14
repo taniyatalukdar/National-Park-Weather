@@ -11,9 +11,9 @@ namespace NPGeek.Web.DAL
 	{
 		const string connectionString = @"Server =.\SQLEXPRESS; database = npgeek; Trusted_Connection = True;";
 
-		public Weather GetForecast(string parkCode)
+		public List<Weather> GetForecast(string parkCode)
 		{
-			Weather weather = new Weather();
+			List<Weather> weathers = new List<Weather>();
 
 			try
 			{
@@ -26,10 +26,11 @@ namespace NPGeek.Web.DAL
 					SqlDataReader reader = cmd.ExecuteReader();
 					while (reader.Read())
 					{
-						 weather = MapRowToWeather(reader);
+						 Weather weather = MapRowToWeather(reader);
+                        weathers.Add(weather);
 					
 					}
-					return weather;
+					return weathers;
 
 				}
 			}

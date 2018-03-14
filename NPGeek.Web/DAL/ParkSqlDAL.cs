@@ -48,7 +48,7 @@ namespace NPGeek.Web.DAL
                     cmd.Parameters.AddWithValue("@code", code);
 
                     SqlDataReader reader = cmd.ExecuteReader();
-                    if(reader.Read())
+                    while(reader.Read())
                     {
                         park = MapRowToPark(reader);
                     }

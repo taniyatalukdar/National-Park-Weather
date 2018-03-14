@@ -1,4 +1,5 @@
 ﻿@model NPGeek.Web.Models.Park
+
 @{
     ViewBag.Title = "ParkDetail";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -15,7 +16,7 @@
             <p>@Model.ParkDescription</p>
             <p>@Model.MilesOfTrail</p>
             <p>@Model.Acreage</p>
-            <p>@Model.Elevation</p>
+            <p>@Model.Elevation</p> 
             <p>@Model.NumberOfCampsites</p>
             <p>@Model.Climate</p>
             <p>@Model.YearFounded</p>
@@ -27,5 +28,10 @@
         </div>
     </div>
 </form>
+
+
+<div>
+    @Html.Action("WeatherDisplay")
+</div>
 
 
