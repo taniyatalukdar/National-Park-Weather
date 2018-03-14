@@ -9,6 +9,6 @@ namespace NPGeek.Web.DAL
 {
 	public interface IWeatherDAL
 	{
-		Weather GetForecast(string parkCode);
+		List<Weather> GetForecast(string parkCode);
 	}
 }
