@@ -5,23 +5,27 @@
 }
 
 <h2>ParkDetail</h2>
-<div class="detail-container">
-    <img src="~/Content/img/@Model.ImageName.ToLower()"/>
-    <div class="box">
-        <h3>@Model.ParkName</h3>
-        <h5>@Model.State</h5>
-        <p>@Model.ParkDescription</p>
-        <p>@Model.MilesOfTrail</p>
-        <p>@Model.Acreage</p>
-        <p>@Model.Elevation</p>
-        <p>@Model.NumberOfCampsites</p>
-        <p>@Model.Climate</p>
-        <p>@Model.YearFounded</p>
-        <p>@Model.AnnualVisitorCount</p>
-        <p>@Model.InspirationalQuote</p>
-        <p>@Model.InspirationalQuoteSource</p>
-        <p>@Model.EntryFee</p>
-        <p>@Model.NumberOfAnimalSpecies</p>
+
+<form action="~/Views/Park/ParkDetail.cshtml" method="get">
+    <div class="detail-container">
+        <img src="~/Content/img/parks/@(Model.ParkCode).jpg" />
+             <div class="box">
+            <h3>@Model.ParkName</h3>
+            <h5>@Model.State</h5>
+            <p>@Model.ParkDescription</p>
+            <p>@Model.MilesOfTrail</p>
+            <p>@Model.Acreage</p>
+            <p>@Model.Elevation</p>
+            <p>@Model.NumberOfCampsites</p>
+            <p>@Model.Climate</p>
+            <p>@Model.YearFounded</p>
+            <p>@Model.AnnualVisitorCount</p>
+            <p>@Model.InspirationalQuote</p>
+            <p>@Model.InspirationalQuoteSource</p>
+            <p>@Model.EntryFee</p>
+            <p>@Model.NumberOfAnimalSpecies</p>
+        </div>
     </div>
-</div>
+</form>
+
 

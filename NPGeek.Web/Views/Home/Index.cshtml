@@ -6,7 +6,8 @@
 @foreach (var park in Model)
 {
     <form method="get" action="@Url.Action("ParkDetail", "Park")">
-        <input type="image" src="~/Content/img/parks/@(park.ParkCode.ToLower()).jpg" value="@park.ParkCode" name="code" />
-            @*<h2>@park.ParkName</h2>*@
+        <input type="image" src="~/Content/img/parks/@(park.ParkCode).jpg" value="@park.ParkCode" name="code" />
+        <h2>@park.ParkName - @park.State</h2>
+        <p>@park.ParkDescription</p>
     </form>
 }
