@@ -2,6 +2,7 @@
 
 @foreach (var weather in Model)
 {
+<<<<<<< HEAD
    
    <p>@weather.ParkCode</p>
    <p>@weather.Forecast</p>
@@ -11,4 +12,78 @@
    <input type="radio" value="Farenheit" />
    <p>@weather.High</p>
    <p>@weather.Low</p>
+=======
+    if (weather.Forecast == "partly cloudy")
+    {
+        <img src="~/Content/img/weather/partlyCloudy.png" />
+    }
+    else
+    {
+
+
+    <img src="~/Content/img/weather/@(weather.Forecast).png" />
+    }
+    if (weather.Forecast == "snow")
+    {
+        <p>Pack snow shoes!</p>
+    }
+    else if (weather.Forecast == "rain")
+    {
+        <p>Pack rain gear and wear waterproof shoes!</p>
+    }
+    else if (weather.Forecast == "thunderstorms")
+    {
+        <p>Seek shelter and avoid hiking in exposed ridges!</p>
+    }
+    else if (weather.Forecast == "sunny")
+    {
+        <p>Pack and wear sunscreen!</p>
+    }
+    else if (weather.High > 74)
+    {
+        <p>Bring an extra gallon of water!</p>
+    }
+    else if ((weather.High - weather.Low) > 20)
+    {
+        <p>Be sure to dress in breathable layers!</p>
+
+    }
+    else if (weather.Low < 20)
+    {
+        <p>Be sure to limit exposure to frigid temperatures. Wear layers and be sure to seek shelter.</p>
+    }
+    <p>@weather.Forecast</p>
+    <p>@weather.FiveDayForecastValue</p>
+
+
+    <input type="text" id="temp" value="@weather.High">
+    <button type="button" id="tempToggle">F&#176;</button>
+
+    <script type="text/javascript">
+        var temp = "c";
+        var tempEl = $('#temp');
+
+        $("#tempToggle").on("click", function () {
+
+            // Get actual shown temperature
+            var tempVal = parseFloat(@weather.High);
+
+            if (temp == "c") {
+                temp = "f";
+                // Calculate
+                var converted = (tempVal - 32) / (9 / 5);
+                // Set
+                tempEl.val(converted.toFixed(1));
+                $(this).html("C&#176;");
+            } else {
+                temp = "c";
+                // Calculate
+                var converted = (tempVal * 1.8) + 32;
+                // Set
+                tempEl.val(converted.toFixed(1));
+                $(this).html("F&#176;");
+            }
+        });
+    </script>
+>>>>>>> 6c7ab7d8050943fb25e9a9fd0f566671367929e0
 }

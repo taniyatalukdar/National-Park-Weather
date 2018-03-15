@@ -12,6 +12,7 @@ namespace NPGeek.Web.Models
 		public int Low { get; set; }
 		public int High { get; set; }
 		public string Forecast { get; set; }
+<<<<<<< HEAD
 
 
 		public double CalculateLowCelsius()
@@ -26,5 +27,7 @@ namespace NPGeek.Web.Models
 		}
 
 
+=======
+>>>>>>> 6c7ab7d8050943fb25e9a9fd0f566671367929e0
 	}
 }
