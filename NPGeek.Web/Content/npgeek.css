@@ -3,7 +3,7 @@
    
 }
 header img {
-    max-width: 100%;
+    max-width: 200px;
     height:auto;
 }
 
@@ -51,4 +51,18 @@ header img {
 }
 #temp {
     width: 3.2em;
+}
+
+.weather-box{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+.weather-image img{
+    display: inline-block;
+    width: 200px;
+    height: auto;
+}
+.detail-container{
+    display: grid;
 }

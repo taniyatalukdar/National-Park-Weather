@@ -1,0 +1,33 @@
+﻿@model List<NPGeek.Web.Models.SurveyResult>
+@{
+    ViewBag.Title = "SurveyResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SurveyResult</h2>
+
+<div id="success">Your response has been saved!</div>
+
+@{
+    bool isGrayTile = false;
+    string grayOrWhite = "";
+}
+
+@foreach (var survey in Model)
+{
+    if (isGrayTile)
+    {
+        grayOrWhite = "gray";
+    }
+    else
+    {
+        grayOrWhite = "white";
+    }
+
+    <div class="survey-results" @grayOrWhite>
+        <h3>@survey.ParkCode</h3> 
+       <h5>@survey.ParkName</h5>
+        <h5>@survey.Count</h5>
+    </div>
+    isGrayTile = !isGrayTile;
+}

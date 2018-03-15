@@ -8,7 +8,7 @@
 <form action="~/Views/Park/ParkDetail.cshtml" method="get">
     <div class="detail-container">
         <img src="~/Content/img/parks/@(Model.ParkCode).jpg" />
-             <div class="box">
+             <div class="parkdetail-box">
             <h3>@Model.ParkName</h3>
             <h5>@Model.State</h5>
             <p>@Model.ParkDescription</p>
@@ -30,6 +30,7 @@
 
 <div>
     @Html.Action("WeatherDisplay")
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </div>
 
 

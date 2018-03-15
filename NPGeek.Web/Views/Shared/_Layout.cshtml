@@ -1,9 +1,4 @@
 ﻿<!DOCTYPE html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
-
-
 <html>
 <head>
     <meta charset="UTF-8">
@@ -13,11 +8,11 @@
 
 <body>
     <header>
-        <img src="~/Content/img/header.png" />
+        <img class="logo" src="~/Content/img/logo.png" />
     </header>
     <div class="nav">
-        <h1>National Parks Guide</h1>
-        <h2>@Html.ActionLink("Home", "Index", "Home")</h2>
+        <h1>@Html.ActionLink("National Parks Guide", "Index", "Home")</h1>
+        <p>@Html.ActionLink("Survey", "Survey", "Survey")</p>
 
     </div>
     <section>
@@ -25,5 +20,6 @@
     </section>
 
 
+    <script src="~/Content/WeatherConverter.js"></script>
 </body>
 </html>
