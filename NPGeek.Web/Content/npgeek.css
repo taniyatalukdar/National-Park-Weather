@@ -1,59 +1,52 @@
-﻿nav {
-    margin-top: 25px;
+﻿body {
+    background-color: white;
+   
 }
-
-    nav h2, nav p {
-        color: white;
-        margin-left: 25px;
-    }
-
-    nav p {
-        font-size: 12px;
-        font-style: italic;
-    }
-
-
-
-li {
-    padding-bottom: 4px;
-}
-
-    li a {
-        color: #0D118B;
-        text-decoration: none;
-        font-size: 18px;
-        text-align: center;
-    }
-
-nav ul {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-    nav ul li {
-        background-color: #FFF;
-        border-radius: 8px;
-        list-style: none;
-        text-align: center;
-        flex-grow: 1;
-        padding-top: 5px;
-        margin: 0 10px;
-        max-width: 200px;
-    }
-
-
-
-li a:hover {
-    text-decoration: underline;
-}
-
-
-
-img{
-    width:400px;
+header img {
+    max-width: 100%;
     height:auto;
 }
-h1{
-    background-color:lightskyblue;
+
+.nav {
+    overflow:hidden;
+    background-color: #021f41;
+   
+}
+
+.nav a{
+    float:left;
+    display:block;
+    color:white;
+    text-align:center;
+    padding-top:25px;
+    text-decoration:none;
+    font-family:Verdana;
+}
+    .nav h1 {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-family: Verdana;
+        padding-left:10px;
+    }
+
+    .parkList input{
+        display:inline-block;
+        margin-top:10px;
+        width:30%;
+        height:auto;
+    }
+
+.parkList h2, h3 {
+    font-family: Verdana;
+    color: #021f41;
+    display:block;
+}
+
+.parkList a {
+    text-decoration: none;
+    font-family: Verdana;
+    color: #021f41;
 }

@@ -19,7 +19,7 @@ namespace NPGeek.Web.DAL
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand(@"SELECT * FROM park;", conn);
+                    SqlCommand cmd = new SqlCommand(@"SELECT * FROM park ORDER BY parkName;", conn);
                     SqlDataReader reader = cmd.ExecuteReader();
                     while(reader.Read())
                     {

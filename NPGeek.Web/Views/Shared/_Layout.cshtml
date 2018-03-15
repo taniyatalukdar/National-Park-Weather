@@ -2,24 +2,19 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>National Park Geek</title>
+    <title>National Parks Guide</title>
     <link rel="stylesheet" href="~/Content/npgeek.css">
 </head>
 
 <body>
     <header>
-        <img src="~/Content/img/logo.png" alt="NP Geek Logo" />
+        <img src="~/Content/img/header.png"/>
     </header>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>Weather</li>
-            <li>Survey</li>
-            <li>Favorite Parks</li>
+    <div class="nav">
+        <h1>National Parks Guide</h1>
+        <h2>@Html.ActionLink("Home", "Index", "Home")</h2>
 
-            
-        </ul>
-    </nav>
+    </div>
     <section>
         @RenderBody()
     </section>

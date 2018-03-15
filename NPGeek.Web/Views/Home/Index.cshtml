@@ -3,11 +3,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@foreach (var park in Model)
-{
+<div class="parkList">
+    @foreach (var park in Model)
+    {
     <form method="get" action="@Url.Action("ParkDetail", "Park")">
         <input type="image" src="~/Content/img/parks/@(park.ParkCode).jpg" value="@park.ParkCode" name="code" />
-        <h2>@park.ParkName - @park.State</h2>
-        <p>@park.ParkDescription</p>
+        <h2><a href="@Url.Action("ParkDetail","Park", new { code = park.ParkCode })"> @park.ParkName - @park.State</a></h2>
+        <h3>@park.ParkDescription</h3>
     </form>
-}
+    }
+</div>
