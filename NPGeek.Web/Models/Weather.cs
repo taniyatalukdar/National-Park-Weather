@@ -24,5 +24,7 @@ namespace NPGeek.Web.Models
 			return Math.Round((High - 32) * 0.556, 0);
 
 		}
+
+
 	}
 }
