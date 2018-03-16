@@ -8,22 +8,53 @@
 <form action="~/Views/Park/ParkDetail.cshtml" method="get">
     <div class="detail-container">
         <img src="~/Content/img/parks/@(Model.ParkCode).jpg" />
-        <div class="parkdetail-box">
-            <h2>@Model.ParkName - @Model.State</h2>
+        <h2>@Model.ParkName - @Model.State</h2>
+        <blockquote style="font-style:italic">@Model.InspirationalQuote @Model.InspirationalQuoteSource</blockquote>
 
-            <p>@Model.ParkDescription</p>
-            <p>Miles of Trail: @Model.MilesOfTrail</p>
-            <p>Acreage: @Model.Acreage</p>
-            <p>Elevation: @Model.Elevation</p>
-            <p>Number of Campsites: @Model.NumberOfCampsites</p>
-            <p>Climate: @Model.Climate</p>
-            <p>Year Founded: @Model.YearFounded</p>
-            <p>Annual Visitor Count: @Model.AnnualVisitorCount</p>
-            <p>Entry Fee: $@Model.EntryFee</p>
-            <p>Number of Animal Species: @Model.NumberOfAnimalSpecies</p>
-            <blockquote style="font-style:italic">@Model.InspirationalQuote<h4> ~@Model.InspirationalQuoteSource</h4></blockquote>
-        </div>
+        <p>@Model.ParkDescription</p>
     </div>
+        <div class="parkdetail-box">
+            <table>
+                <thead>@Model.ParkName Facts at a Glance</thead>
+                <tr><td>Miles of Trail</td>
+                    <td>@Model.MilesOfTrail</td>
+                </tr>
+                <tr>
+                    <td>Acreage</td>
+                    <td>@Model.Acreage</td>
+                </tr>
+                <tr>
+                    <td>Elevation</td>
+                    <td>@Model.Elevation</td>
+                </tr>
+                <tr>
+                    <td>Number of Campsites</td>
+                    <td>@Model.NumberOfCampsites</td>
+                </tr>
+                <tr>
+                    <td>Climate</td>
+                    <td>@Model.Climate</td>
+                </tr>
+                <tr>
+                    <td>Year Founded</td>
+                    <td>@Model.YearFounded</td>
+                </tr>
+                <tr>
+                    <td>Annual Visitor Count</td>
+                    <td>@Model.AnnualVisitorCount</td>
+                </tr>
+                <tr>
+                    <td>Entry Fee</td>
+                    <td>$@Model.EntryFee</td>
+                </tr>
+                <tr>
+                    <td>Number of Animal Species</td>
+                    <td>@Model.NumberOfAnimalSpecies</td>
+                </tr>
+            </table>
+
+            
+        </div>
 </form>
 
 

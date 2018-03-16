@@ -1,6 +1,6 @@
 ﻿function convertValues(desiredUnit) {
 
-    var temperature = document.getElementsByClassName("weather-temperature");
+    var temperature = document.getElementsByClassName("weather-box");
     var button = document.getElementById("tempToggle");
 
     if (desiredUnit === 'F') {
@@ -9,7 +9,7 @@
        
             temperature[i].textContent = Math.round((parseFloat(temperature[i].textContent) * 1.8) + 32, 0);
         }
-        button.innerText = "F";
+        button.innerText = "Farenheit";
     }
     else {
         // Convert from F to C
@@ -20,7 +20,7 @@
 
         
 
-        button.innerText = "C";
+        button.innerText = "Celsius";
     }
 
     
@@ -42,8 +42,9 @@ function btnClick() {
 // When the page loads
 window.onload = function () {
     // If user prefers F, do nothing
-    if (document.cookie === 'F' || document.cookie === '')
+    if (document.cookie === 'F' || document.cookie === '') {
         return;
+    }
     else { // Convert the F values to C
         convertValues('C');
     }

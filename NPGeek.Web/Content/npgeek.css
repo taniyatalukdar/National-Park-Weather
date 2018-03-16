@@ -67,3 +67,17 @@ img{
     }
 
 
+.weather-box img {
+    height: 150px;
+    width: auto;
+    float:right;
+}
+
+.weather-box {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-template-columns:4fr 4fr 4fr 4fr;
+}
+
+

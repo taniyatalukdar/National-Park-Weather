@@ -2,35 +2,43 @@
 
 
 <script src="~/Content/WeatherConverter.js"></script>
+<button type="button" id="tempToggle" onclick="btnClick()">Farenheit</button>
 
-<button type="button" id="tempToggle" onclick="btnClick()">F</button>
+
+
 
 
 @foreach (var weather in Model)
 {
-    <div class="weather-box">
-        @weather.ParkCode
-        @weather.Forecast
-        @weather.FiveDayForecastValue
-        <p class="weather-temperature">@weather.High</p>
-        <p class="weather-temperature">@weather.Low</p>
+    <div>
 
+        @if (weather.Forecast == "partly cloudy")
+        {
 
+            <img src="~/Content/img/weather/partlyCloudy.png" />
+
+        }
+        else
+        {
+
+            <img src="~/Content/img/weather/@(weather.Forecast).png" />
+
+        }
     </div>
 
-    if (weather.Forecast == "partly cloudy")
-    {
-        <div class="weather-image">
-            <img src="~/Content/img/weather/partlyCloudy.png" />
-        </div>
-    }
-    else
-    {
-        <div class="weather-image">
-            <img src="~/Content/img/weather/@(weather.Forecast).png" />
-        </div>
-    }
 
+}
+
+@foreach (var weather in Model)
+{
+
+    <p>High: </p> <p class="weather-box">@weather.High</p>
+    <p>Low: </p> <p class="weather-box">@weather.Low</p>
+
+}
+
+@foreach (var weather in Model)
+{
     if (weather.Forecast == "snow")
     {
         <p>Pack snow shoes!</p>
@@ -60,12 +68,8 @@
     {
         <p>Be sure to limit exposure to frigid temperatures. Wear layers and be sure to seek shelter.</p>
     }
-    <p>@weather.Forecast</p>
-    <p>@weather.FiveDayForecastValue</p>
-
-
-
-
-
 }
+
+
+
 
