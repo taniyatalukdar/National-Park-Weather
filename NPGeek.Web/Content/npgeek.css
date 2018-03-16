@@ -67,10 +67,10 @@ img{
     }
 
 
-.weather-box img {
-    height: 150px;
+.weather-image img {
+    height: 100px;
     width: auto;
-    float:right;
+    float:left;
 }
 
 .weather-box {
