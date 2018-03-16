@@ -3,34 +3,34 @@
     ViewBag.Title = "Survey";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Survey</h2>
-<form action="@Url.Action("Survey", "Survey")" method="post">
-    <p>
-        Email:
-        @Html.TextBoxFor(m => m.Email)
-    </p>
-    <p>
-        State:
-        @Html.TextBoxFor(m => m.State)
-    </p>
-    <select name="parkCode">
-        <option value="CVNP">Cuyahoga Valley National Park</option>
-        <option value="ENP">Everglades National Park</option>
-        <option value="GCNP">Grand Canyon National Park</option>
-        <option value="GNP">Glacier National Park</option>
-        <option value="GSMNP">Great Smokey Mountains National Park</option>
-        <option value="GTNP">Grand Teton National Park</option>
-        <option value="MRNP">Mount Rainier National Park</option>
-        <option value="RMNP">Rockey Mountain National Park</option>
-        <option value="YNP">Yellowstone National Park</option>
-        <option value="YNP2">Yosemite National Park</option>
-    </select>
-    <div>
-        <input type="radio" name="activityLevel" checked="checked" />Inactive <br />
-        <input type="radio" name="activityLevel" />Sedantary <br />
-        <input type="radio" name="activityLevel" />Active <br />
-        <input type="radio" name="activityLevel" />Extremely Active<br />
-    </div>
-    <button>Submit</button>
-</form>
+<div class="survey-form">
+    <form action="@Url.Action("Survey", "Survey")" method="post">
+        <p>
+            Email:
+            @Html.TextBoxFor(m => m.Email)
+        </p>
+        <p>
+            State:
+            @Html.TextBoxFor(m => m.State)
+        </p>
+        <select name="parkCode">
+            <option value="CVNP">Cuyahoga Valley National Park</option>
+            <option value="ENP">Everglades National Park</option>
+            <option value="GCNP">Grand Canyon National Park</option>
+            <option value="GNP">Glacier National Park</option>
+            <option value="GSMNP">Great Smokey Mountains National Park</option>
+            <option value="GTNP">Grand Teton National Park</option>
+            <option value="MRNP">Mount Rainier National Park</option>
+            <option value="RMNP">Rockey Mountain National Park</option>
+            <option value="YNP">Yellowstone National Park</option>
+            <option value="YNP2">Yosemite National Park</option>
+        </select>
+        <div>
+            <input type="radio" name="activityLevel" checked="checked" />Inactive <br />
+            <input type="radio" name="activityLevel" />Sedantary <br />
+            <input type="radio" name="activityLevel" />Active <br />
+            <input type="radio" name="activityLevel" />Extremely Active<br />
+        </div>
+        <button>Submit</button>
+    </form>
+</div>

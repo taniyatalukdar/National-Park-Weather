@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>National Parks Guide</title>
     <link rel="stylesheet" href="~/Content/npgeek.css">
+    <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
 </head>
 
 <body>
@@ -11,9 +12,11 @@
     <header>
         <img src="~/Content/img/logo.png" />
     </header>
-    <nav>
-        <h3>@Html.ActionLink("Home", "Index", "Home")
-       @Html.ActionLink("Survey", "Survey", "Survey")</h3>
+    <nav class="main-nav">
+        <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("Survey", "Survey", "Survey")</li>
+    </ul>
     </nav>
 
     <section>

@@ -1,16 +1,28 @@
-﻿body {
-    background-color: white;
-    color: black;
-    font-family: sans-serif;
+﻿:root {
+    --primary: #364156;
+    --dark: #011638;
+    --light: #CDCDCD;
+    --shadow: #DFF8FB;
+    --green: #214E34;
+}
+html {
+    font-family: Assistant, sans-serif, Arial;
+    color: var(--light);
+}
+body {
+    background-color: var(--dark);
 }
 
 header img {
-    width: auto;
-    height: 150px;
+    width: 350px;
+    height: auto;
 }
 
-nav {
-    background-color: #46cd4a;
+.main-nav ul {
+    background-color: var(--primary);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    list-style: none;
 }
 
 nav a{
@@ -19,19 +31,30 @@ nav a{
     color:white;
     padding:15px;
 }
-
+ a{
+     color: var(--light);
+ }
 
 img{
     display:inline-block;
     padding: 0px 0px 0px 0px;
     float:left;
+    margin-left: 8px;
 }
 
-.parkGrid div{
+.parkGrid {
     display:grid;
     grid-column-start:2;
     grid-column-end:3;
     text-align:right;
+}
+
+.detail-container h4{
+    text-align: right;
+
+}
+.survey-form{
+    margin: 20px;
 }
 
 
