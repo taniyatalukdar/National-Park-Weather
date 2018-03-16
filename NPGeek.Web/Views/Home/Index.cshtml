@@ -1,14 +1,23 @@
 ﻿@model List<NPGeek.Web.Models.Park>
 @{
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="parkGrid">
+
     @foreach (var park in Model)
     {
-    <form method="get" action="@Url.Action("ParkDetail", "Park")">
-        <h2><a href="@Url.Action("ParkDetail","Park", new { code = park.ParkCode })"> @park.ParkName - @park.State</a></h2>
-        <input type="image" src="~/Content/img/parks/@(park.ParkCode).jpg" value="@park.ParkCode" name="code" />
-        <h3>@park.ParkDescription</h3>
 
-    </form>
+        <form method="get" action="@Url.Action("ParkDetail", "Park")">
+
+            
+            <img src="~/Content/img/parks/@(park.ParkCode).jpg" />
+
+            <h2><a href="@Url.Action("ParkDetail","Park", new { code = park.ParkCode })"> @park.ParkName - @park.State</a></h2>
+            <h3>@park.ParkDescription</h3>
+
+
+        </form>
     }
+</div>

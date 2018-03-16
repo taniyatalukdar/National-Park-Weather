@@ -20,8 +20,18 @@ nav a{
     padding:15px;
 }
 
-#temp{
-    width:3.2em;
+
+img{
+    display:inline-block;
+    padding: 0px 0px 0px 0px;
+    float:left;
+}
+
+.parkGrid div{
+    display:grid;
+    grid-column-start:2;
+    grid-column-end:3;
+    text-align:right;
 }
 
 
