@@ -19,7 +19,7 @@ header img {
 }
 
 .main-nav ul {
-    background-color: var(--primary);
+    background-color: var(--light);
     padding-bottom: 10px;
     padding-top: 10px;
     list-style: none;
@@ -28,7 +28,7 @@ header img {
 nav a{
     text-decoration: none;
     font-size: 2em;
-    color:white;
+    color:var(--shadow);
     padding:15px;
 }
  a{
@@ -54,7 +54,16 @@ img{
 
 }
 .survey-form{
-    margin: 20px;
+    position:center;
 }
+
+    .survey-form img {
+        height: 250px;
+        width: auto;
+        display: inline-block;
+        padding: 0px 0px 0px 0px;
+        float: right;
+        margin-left: 8px;
+    }
 
 

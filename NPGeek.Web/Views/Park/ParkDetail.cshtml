@@ -8,21 +8,20 @@
 <form action="~/Views/Park/ParkDetail.cshtml" method="get">
     <div class="detail-container">
         <img src="~/Content/img/parks/@(Model.ParkCode).jpg" />
-             <div class="parkdetail-box">
-            <h3>@Model.ParkName</h3>
-            <h5>@Model.State</h5>
+        <div class="parkdetail-box">
+            <h2>@Model.ParkName - @Model.State</h2>
+
             <p>@Model.ParkDescription</p>
-            <p>@Model.MilesOfTrail</p>
-            <p>@Model.Acreage</p>
-            <p>@Model.Elevation</p> 
-            <p>@Model.NumberOfCampsites</p>
-            <p>@Model.Climate</p>
-            <p>@Model.YearFounded</p>
-            <p>@Model.AnnualVisitorCount</p>
-            <p>@Model.EntryFee</p>
-            <p>@Model.NumberOfAnimalSpecies</p>
-            <blockquote>@Model.InspirationalQuote</blockquote>
-            <h4>@Model.InspirationalQuoteSource</h4>
+            <p>Miles of Trail: @Model.MilesOfTrail</p>
+            <p>Acreage: @Model.Acreage</p>
+            <p>Elevation: @Model.Elevation</p>
+            <p>Number of Campsites: @Model.NumberOfCampsites</p>
+            <p>Climate: @Model.Climate</p>
+            <p>Year Founded: @Model.YearFounded</p>
+            <p>Annual Visitor Count: @Model.AnnualVisitorCount</p>
+            <p>Entry Fee: $@Model.EntryFee</p>
+            <p>Number of Animal Species: @Model.NumberOfAnimalSpecies</p>
+            <blockquote style="font-style:italic">@Model.InspirationalQuote<h4> ~@Model.InspirationalQuoteSource</h4></blockquote>
         </div>
     </div>
 </form>
