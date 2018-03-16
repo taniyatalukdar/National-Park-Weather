@@ -1,5 +1,11 @@
 ﻿@model IList<NPGeek.Web.Models.Weather>
 
+
+<script src="~/Content/WeatherConverter.js"></script>
+
+<button type="button" id="tempToggle" onclick="btnClick()">F&#176;</button>
+
+
 @foreach (var weather in Model)
 {
     <div class="weather-box">
@@ -8,6 +14,8 @@
         @weather.FiveDayForecastValue
         <p class="weather-temperature">@weather.High</p>
         <p class="weather-temperature">@weather.Low</p>
+
+
     </div>
 
     if (weather.Forecast == "partly cloudy")
@@ -56,9 +64,8 @@
     <p>@weather.FiveDayForecastValue</p>
 
 
-    @*<input type="text" id="temp" value="@weather.High">*@
-    <button type="button" id="tempToggle" onclick="changeTemp()">F&#176;</button>
 
-            
+
 
 }
+

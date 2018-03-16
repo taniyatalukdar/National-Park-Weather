@@ -1,68 +1,27 @@
 ﻿body {
     background-color: white;
-   
+    color: black;
+    font-family: sans-serif;
 }
+
 header img {
-    max-width: 200px;
-    height:auto;
+    width: auto;
+    height: 150px;
 }
 
-.nav {
-    overflow:hidden;
-    background-color: #021f41;
+nav {
+    background-color: #46cd4a;
 }
 
-.nav a{
-    float:left;
-    display:block;
-    color:white;
-    text-align:center;
-    padding-top:25px;
-    text-decoration:none;
-    font-family:Verdana;
-}
-    .nav h1 {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        font-family: Verdana;
-        padding-left:10px;
-    }
-
-    .parkList input{
-        display:inline-block;
-        margin-top:10px;
-        width:30%;
-        height:auto;
-    }
-
-.parkList h2, h3 {
-    font-family: Verdana;
-    color: #021f41;
-    display:block;
-}
-
-.parkList a {
+nav a{
     text-decoration: none;
-    font-family: Verdana;
-    color: #021f41;
-}
-#temp {
-    width: 3.2em;
+    font-size: 2em;
+    color:white;
+    padding:15px;
 }
 
-.weather-box{
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 7;
+#temp{
+    width:3.2em;
 }
-.weather-image img{
-    display: inline-block;
-    width: 200px;
-    height: auto;
-}
-.detail-container{
-    display: grid;
-}
+
+

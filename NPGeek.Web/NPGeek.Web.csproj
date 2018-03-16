@@ -101,10 +101,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\img\header.jpg" />
+    <Content Include="Content\img\header2.jpg" />
     <Content Include="Content\img\Misc\backpack.png" />
     <Content Include="Content\img\Misc\backpack2.jpg" />
     <Content Include="Content\img\Misc\geek.png" />
-    <Content Include="Content\img\header.png" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\parks\cvnp.jpg" />
     <Content Include="Content\img\parks\enp.jpg" />

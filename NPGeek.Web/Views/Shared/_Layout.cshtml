@@ -7,19 +7,20 @@
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="~/Content/img/logo.png" />
-    </header>
-    <div class="nav">
-        <h1>@Html.ActionLink("National Parks Guide", "Index", "Home")</h1>
-        <p>@Html.ActionLink("Survey", "Survey", "Survey")</p>
 
-    </div>
+    <header>
+        <img src="~/Content/img/logo.png" />
+    </header>
+    <nav>
+        <h3>@Html.ActionLink("Home", "Index", "Home")
+       @Html.ActionLink("Survey", "Survey", "Survey")</h3>
+    </nav>
+
     <section>
         @RenderBody()
     </section>
 
 
-    <script src="~/Content/WeatherConverter.js"></script>
+    
 </body>
 </html>

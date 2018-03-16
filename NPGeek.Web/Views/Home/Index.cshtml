@@ -2,14 +2,13 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<img src="~/Content/img/header.png" />
-<div class="parkList">
+
     @foreach (var park in Model)
     {
     <form method="get" action="@Url.Action("ParkDetail", "Park")">
-        <input type="image" src="~/Content/img/parks/@(park.ParkCode).jpg" value="@park.ParkCode" name="code" />
         <h2><a href="@Url.Action("ParkDetail","Park", new { code = park.ParkCode })"> @park.ParkName - @park.State</a></h2>
+        <input type="image" src="~/Content/img/parks/@(park.ParkCode).jpg" value="@park.ParkCode" name="code" />
         <h3>@park.ParkDescription</h3>
+
     </form>
     }
-</div>
