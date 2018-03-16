@@ -35,13 +35,20 @@ nav a{
      color: var(--light);
  }
 
+.parkName-thead{
+    font-weight:bold;
+}
 img{
     display:inline-block;
     padding: 0px 0px 0px 0px;
     float:left;
-    margin-left: 8px;
+    margin: 8px;
+    width: 400px;
 }
 
+.quote-source{
+    float: right;
+}
 .parkGrid {
     display:grid;
     grid-column-start:2;
@@ -65,12 +72,17 @@ img{
         float: right;
         margin-left: 8px;
     }
-
+.parkdetail-box{
+    font-weight: bold;
+}
 
 .weather-image img {
+    grid-row-start: 1;
     height: 100px;
     width: auto;
-    float:left;
+}
+.high-low {
+    grid-row-start: 2;
 }
 
 .weather-box {
@@ -80,4 +92,40 @@ img{
     grid-template-columns:4fr 4fr 4fr 4fr;
 }
 
+.weather-details {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+.weather-message {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-template-columns: 4fr 4fr 4fr 4fr 4fr;
+    float:right;
+    margin: 0px;
+    word-wrap: normal;
+}
 
+.survey-results{
+    display: flex;
+}
+
+.survey-results > h3{
+    padding: 10px;
+}
+    .survey-results > h5 {
+        padding: 10px;
+    }
+
+    .survey-results img {
+        width: auto;    
+    }
+
+#success{
+    text-align: center;
+}
+.foreach{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

@@ -1,70 +1,70 @@
 ﻿@model IList<NPGeek.Web.Models.Weather>
 
 <script src="~/Content/WeatherConverter.js"></script>
+<div class="weather-details">
+    @foreach (var weather in Model)
+    {
+        <div class="weather-image">
+            @if (weather.Forecast == "partly cloudy")
+            {
+                <img src="~/Content/img/weather/partlyCloudy.png" />
+            }
+            else
+            {
+                <img src="~/Content/img/weather/@(weather.Forecast).png" />
+            }
+        </div>
+    }
 
-
-@foreach (var weather in Model)
-{
-    <div class="weather-image">
-        @if (weather.Forecast == "partly cloudy")
-        {
-            <img src="~/Content/img/weather/partlyCloudy.png" />
-        }
-        else
-        {
-            <img src="~/Content/img/weather/@(weather.Forecast).png" />
-        }
-    </div>
-}
-<table>
-    <tr>
-        <th>Temperature</th>
-        @foreach (var weather in Model)
-        {
-
-            <td>High </td>
-            <td>@weather.High</td>
-            <td>Low </td>
-            <td>@weather.Low</td>
-
-        }
-    </tr>
-    <tr>
-        <th>Temperature</th>
+    @foreach (var weather in Model)
+    {
+        <div class="high-low">
+            <p>High</p><p class="weather-box">@weather.High </p>
+            <p>Low</p><p class="weather-box">@weather.Low</p>
+        </div>
+    }
+</div>
+    <div class="weather-message">
         @foreach (var weather in Model)
         {
             if (weather.Forecast == "snow")
             {
-                <td>Pack snow shoes</td>
+                <p>Pack snow shoes</p>
             }
             else if (weather.Forecast == "rain")
             {
-                <td>Pack rain gear and wear waterproof shoes!</td>
+                <p>Pack rain gear and wear waterproof shoes!</p>
             }
             else if (weather.Forecast == "thunderstorms")
             {
-                <td>Seek shelter and avoid hiking in exposed ridges!</td>
+                <p>Seek shelter and avoid hiking in exposed ridges!</p>
             }
             else if (weather.Forecast == "sunny")
             {
-                <td>Pack and wear sunscreen!</td>
+                <p>Pack and wear sunscreen!</p>
             }
             else if (weather.High > 74)
             {
-                <td>Bring an extra gallon of water!</td>
+                <p>Bring an extra gallon of water!</p>
             }
             else if ((weather.High - weather.Low) > 20)
             {
-                <td>Be sure to dress in breathable layers!</td>
+                <p>Be sure to dress in breathable layers!</p>
 
             }
             else if (weather.Low < 20)
             {
-                <td>Be sure to limit exposure to frigid temperatures. Wear layers and be sure to seek shelter.</td>
+                <p>Be sure to limit exposure to frigid temperatures. Wear layers and be sure to seek shelter.</p>
+            }
+            else
+            {
+                <p>Have a great day!</p>
             }
         }
-    </tr>
-</table>
-<button type="button" id="tempToggle" onclick="btnClick()">Farenheit</button>
+    </div>
+
+
+ <button type="button" id="tempToggle" onclick="btnClick()">Farenheit</button>
+
 
 

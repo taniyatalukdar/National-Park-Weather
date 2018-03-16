@@ -9,13 +9,13 @@
     <div class="detail-container">
         <img src="~/Content/img/parks/@(Model.ParkCode).jpg" />
         <h2>@Model.ParkName - @Model.State</h2>
-        <blockquote style="font-style:italic">@Model.InspirationalQuote @Model.InspirationalQuoteSource</blockquote>
-
         <p>@Model.ParkDescription</p>
     </div>
+    <blockquote style="font-style:italic">@Model.InspirationalQuote - @Model.InspirationalQuoteSource</blockquote>
+    
         <div class="parkdetail-box">
             <table>
-                <thead>@Model.ParkName Facts at a Glance</thead>
+                <thead class="parkName-thead">@Model.ParkName Facts at a Glance</thead>
                 <tr><td>Miles of Trail</td>
                     <td>@Model.MilesOfTrail</td>
                 </tr>
